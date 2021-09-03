@@ -244,6 +244,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let randomLayer = document.getElementById("randomLayer");
   let endlessRandom = document.getElementById("endlessRandom");
   let fullscreen = document.getElementById("fullscreen");
+  let generateGif = document.getElementById("generateGif");
 
   // okay, we haven't gone fullscreen
   if (content) {
@@ -251,6 +252,7 @@ document.addEventListener("DOMContentLoaded", function () {
     randomLayer.onclick = setRandomLayer;
     endlessRandom.onclick = setEndlessRandom;
     fullscreen.onclick = setupFullscreen;
+    generateGif.onclick = generateGifFile;
     createLayerDropdown();
     createSuggestedLayersDropdown();
     setupDropdownPushStates();
@@ -261,6 +263,10 @@ document.addEventListener("DOMContentLoaded", function () {
     setupEngine();
   });
 });
+
+function generateGifFile() {
+  console.log("Generating Gif...");
+}
 
 function createLayerDropdown() {
   var optionHtml = "";
