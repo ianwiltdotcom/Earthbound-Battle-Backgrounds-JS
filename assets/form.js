@@ -266,6 +266,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function generateGifFile() {
   console.log("Generating Gif...");
+  var gif = new GIF({workers: 2, quality: 10});
+  console.log(gif);
 }
 
 function createLayerDropdown() {
